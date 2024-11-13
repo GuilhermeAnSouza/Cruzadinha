@@ -591,11 +591,13 @@ function verify() {
         answer = answer.toLowerCase();
         if (answer == special_words[cont_correctAnswer]) {
             div_verifiedAnswer.classList.add('correctAnswer');
+            div_verifiedAnswer.classList.remove('wrongAnswer');
             div_verifiedAnswer.innerHTML = '<br>Resposta Correta!';
             cont_correctAnswer++;
         }
         else {
             div_verifiedAnswer.classList.add('wrongAnswer');
+            div_verifiedAnswer.classList.remove('correctAnswer');
             div_verifiedAnswer.innerHTML = '<br>Resposta Incorreta, tente novamente';
         }
         setTimeout(function () {
